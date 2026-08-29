@@ -210,7 +210,7 @@ const plugins = isGitHubPages
 
 export default defineConfig({
   // GitHub Pages uses a repository subpath for project sites and the root for <user>.github.io sites.
-  base: isGitHubPages ? (process.env.GITHUB_PAGES_ROOT === "true" ? "/" : "/stay/") : "/",
+  base: isGitHubPages ? "/stay/" : "/",
   plugins,
   resolve: {
     alias: {
