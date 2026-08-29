@@ -33,6 +33,8 @@ jobs:
         run: pnpm build
         env:
           GITHUB_PAGES: "true"
+      - name: Check generated index.html
+        run: cat dist/public/index.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
